@@ -72,7 +72,8 @@ function init(){
 
     player.x = 300;
     player.y = 550;
-
+    player.xSpeed = 6.7;
+    player.ySpeed = 0;
 
     dead = false;
 }
