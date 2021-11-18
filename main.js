@@ -43,12 +43,8 @@ function helpMessage(){
 
 	ctx.font = "15px Arial";
 	ctx.textAlign = "left";
-	ctx.fillText("1.방향키(← →)를 움직여 발판을 밟고 최대한 위로 올라가요!", std, screenHeight / 2 -50);
-	ctx.font = "13px Arial";
-	ctx.fillText("※ 화면을 나가면 반대편으로 돌아오니 주의!", std+8, screenHeight / 2 -30);
-	ctx.font = "15px Arial";
-	ctx.fillText("2.아이템(스프링 점프대/신발)을 활용, 더 빠르게 올라갈 수 있어요!", std, screenHeight /2);
-	ctx.fillText("3.움직이고/부서지는 발판, 외계인(밟으면 발판!) 등", std, screenHeight /2 +30);
+	ctx.fillText("죽고나서 Space 누르면 재시작!", std, screenHeight / 2 -50);
+	ctx.fillText("초 스피트 업-> 처음에 space 여러번 눌러서 속도 증가 가능!", std+8, screenHeight / 2 -30);
 }
 
 helpMessage();
@@ -72,8 +68,8 @@ function init(){
 
     player.x = 300;
     player.y = 550;
-    player.xSpeed = 6.7;
-    player.ySpeed = 0;
+    holdingLeftKey = false;
+    holdingRightKey = false;
 
     dead = false;
 }
