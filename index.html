@@ -36,6 +36,7 @@
 <input type="number" id="codeButton" value="" />
 </body>
 <script>
+    var startCnt = 0;
     document.getElementById('canvasDiv').style.visibility = "visible";
     function restartBtn_click(){
         document.getElementById('spin_button').disabled = false;
@@ -47,11 +48,15 @@
         ctx.textAlign = "center";
         ctx.font = "36px Arial";
         ctx.fillText("꾀꼬닥!!!", screenWidth / 2, (screenHeight / 2) + 50);
+        startCnt = 0;
     }
 
     function t(){
         if(document.getElementById('codeButton').value == 486){
-            start();
+            if(startCnt == 0){
+                startCnt = 1;
+                start();
+            }
         }else{
             alert("Code가 다릅니다~!");
         }
