@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=11" charset="utf-8">
+    <title>연습해보자</title>
+
+    
+    <script type="text/javascript" src="blockType.js" defer></script>
+    <script type="text/javascript" src="monsters.js" defer></script>
+    <script type="text/javascript" src="powerups.js" defer></script>
+    <script type="text/javascript" src="block.js" defer></script>
+    <script type="text/javascript" src="blockSpawner.js" defer></script>
+    <script type="text/javascript" src="base.js" defer></script>
+    <script type="text/javascript" src="player.js" defer></script>
+    <script type="text/javascript" src="main.js" defer></script>
+</head>
+
+<body>
+
+<div>
+    <div>
+        <div id="instructions" style="display:none;">
+        </div>
+        <div id="results">
+        </div>
+        점수
+        <div id="score">0</div>
+    </div>
+
+    <div class="containerEX">
+        <div class="boxEX-mid">
+            <div id="gameField" style="margin-top:180px; margin-left:36px;">
+                <div id="canvasDiv" > </div>
+
+
+            </div>
+            <div style="margin-left:250px; margin-top: 25px;">
+            </div>
+
+        </div>
+    </div>
+</div>
+<input type="button"  value="시작" onclick="t();">
+코드를 입력해주세요 :)
+<input type="number" id="codeButton" value="" />
+</body>
+<script>
+    document.getElementById('canvasDiv').style.visibility = "visible";
+    function restartBtn_click(){
+        document.getElementById('spin_button').disabled = false;
+    }
+
+    function endGame(point){
+        ctx.font = "60px Arial";
+        ctx.fillStyle = "red";
+        ctx.textAlign = "center";
+        ctx.font = "36px Arial";
+        ctx.fillText("꾀꼬닥!!!", screenWidth / 2, (screenHeight / 2) + 50);
+        alert("끝!");
+    }
+
+    function t(){
+        if(document.getElementById('codeButton').value == 486){
+            start();
+        }else{
+            alert("Code가 다릅니다~!");
+        }
+    }
+
+</script>
+</html>
