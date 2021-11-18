@@ -39,12 +39,11 @@ function helpMessage(){
 	ctx.font = "30px Arial";
 	ctx.fillStyle = "black";
 	ctx.textAlign = "center";
-	ctx.fillText("[게임 방법]", screenWidth / 2, screenHeight / 2 -100);
+	ctx.fillText("[꿀팁!]", screenWidth / 2, screenHeight / 2 -100);
 
 	ctx.font = "15px Arial";
 	ctx.textAlign = "left";
 	ctx.fillText("죽고나서 Space 누르면 재시작!", std, screenHeight / 2 -50);
-	ctx.fillText("초 스피트 업-> 처음에 space 여러번 눌러서 속도 증가 가능!", std+8, screenHeight / 2 -30);
 }
 
 helpMessage();
